@@ -5,7 +5,8 @@
     scroll-behavior: smooth;
 }
 
-body {
+html {
+    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -159,6 +160,15 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* Animation */
+    transform: translateY(0px);
+    opacity: 1;
+    transition: 0.2s ease;
+}
+
+.center-home-header-invisible {
+    transform: translateY(30px);
+    opacity: 0;
 }
 
 .text-home {
@@ -201,6 +211,8 @@ footer {
 .footer_socials {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer_socials img {
@@ -209,9 +221,11 @@ footer {
 }
 
 .footer_logo {
-    margin-right: 10px;
+    margin-right: 20px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer_asso_infos {

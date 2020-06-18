@@ -3,10 +3,13 @@ const navSlide = () => {
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
     const body = document.querySelector('*');
+    const showreel = document.querySelector('.center-home-header');
 
     burger.addEventListener('click', ()=>{
         // Disable scroll
         body.classList.toggle('body-no-scroll-y');
+        // Hide showreel
+        showreel.classList.toggle('center-home-header-invisible');
         // Toggle nav bar
         nav.classList.toggle('nav-active');
         // Animate links
