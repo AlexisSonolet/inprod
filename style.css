@@ -6,7 +6,11 @@
 }
 
 html {
-    width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
     overflow-x: hidden;
 }
 
@@ -104,10 +108,12 @@ nav {
 
     .footer_site_credit p {
         opacity: 0;
+        width: 0;
     }
 
     .footer_asso_infos {
         opacity: 0;
+        width: 0;
     }
 }
 
