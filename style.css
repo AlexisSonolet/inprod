@@ -1,86 +1,176 @@
-html,
-body,
-header,
-.view {
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #0b2046; 
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    color: rgb(235, 235, 235);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 22px;
+    width: 50%;
+    text-align: center;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(235, 235, 235);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(235, 235, 235);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1200px) {
+    .nav-links {
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x:  hidden;
+    }
+
+    .logo {
+        width: 80%;
+    }
+
+    .nav-links{
+        position: absolute;
+        z-index: 1;
+        left: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #162741;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        transform: translateX(-100%);
+        transition: transform 0.2s ease-in
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(-50px) rotate(+20deg);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px) rotate(0deg);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+   opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#logo_titre {
+    vertical-align: middle;
+    margin-bottom: 7px;
+    margin-right: -14px;
+}
+
+.main_page_image {
+    height: 100vh;
+    background-image: url('img/P1040711.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.center-home-header {
+    /* text-align: center; */
     height: 100%;
+    width: 100%;
+    /* Positionnement */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
-
-html {
-  scroll-behavior: smooth;
-}
-
 
 .text-home {
-    /* Style du texte */
+    font-family: 'Syntony', sans-serif;
+    text-decoration: none;
     color: white;
+    padding: 5px;
     border: 3px white solid;
-    width: auto;
-    height: auto;
+    border-radius: 3px;
     font-size: 25px;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.3);
-    /* Positionnement */
-    padding: 10px;
-    display: inline-block;
-    margin-top: 35%;
 }
 
 .text-home:hover
 {
-  color: white;
-  text-decoration: none;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-#showreel_bg
-{
-  width: 100%;
-  height: 100%;
-  position: absolute;
+.center-home-element {
+    z-index: 0;
+    transform: translateY(-30px);
+    margin-bottom: 30px;
 }
 
-
-.center-home-header {
-    margin-left: 25%;
-    text-align: center;
-    height: 100%;
-}
-
-
-@media (max-width: 991px) {
-    .text-home {
-        margin-top: 60%;
-    }
-    .center-home-header {
-        margin-left: 10%;
-    }
-}
-
-
-#left-menu
-{
-  margin-top: 20%;
-  margin-left: 10%;
-  text-align: center;
-}
-
-
-.menu-links
-{
-  line-height: 100%;
-  letter-spacing: 0.07em;
-  font-family: etna;
-  font-size: 200%;
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.menu-links:hover
-{
-  color: rgb(187, 187, 187);
-  text-decoration: none;
+#showreel_bg {
+    height: 100vh;
+    /* padding: 5%; */
+    transition: 0.2s ease;
 }
