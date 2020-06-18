@@ -92,6 +92,14 @@ nav {
         display: block;
         cursor: pointer;
     }
+
+    .footer_site_credit p {
+        opacity: 0;
+    }
+
+    .footer_asso_infos {
+        opacity: 0;
+    }
 }
 
 .nav-active {
