@@ -5,6 +5,14 @@
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden;
+}
+
+.body-no-scroll-y {
+    overflow-y: hidden;
+}
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -24,6 +32,7 @@ nav {
 }
 
 .nav-links {
+    margin-left: 100px;
     display: flex;
     justify-content: space-around;
     width: 50%;
@@ -50,26 +59,25 @@ nav {
     height: 3px;
     background-color: rgb(235, 235, 235);
     margin: 5px;
-    transition: all 0.3s ease;
+    transition: all 0.15s ease;
 }
 
 @media screen and (max-width: 1200px) {
     .nav-links {
         width: 80%;
+        margin-left: 10px;
     }
 }
 
 
 @media screen and (max-width: 768px) {
-    body {
-        overflow-x:  hidden;
-    }
 
     .logo {
         width: 80%;
     }
 
     .nav-links{
+        margin-left: 0;
         position: absolute;
         z-index: 1;
         left: 0px;
@@ -81,7 +89,7 @@ nav {
         align-items: center;
         width: 70%;
         transform: translateX(-100%);
-        transition: transform 0.2s ease-in
+        transition: transform 0.15s ease-in
     }
 
     .nav-links li {
@@ -131,6 +139,7 @@ nav {
     vertical-align: middle;
     margin-bottom: 7px;
     margin-right: -14px;
+    margin-right: -104px;
 }
 
 .main_page_image {
@@ -180,7 +189,6 @@ nav {
 #showreel_bg {
     height: 100vh;
     /* padding: 5%; */
-    transition: 0.2s ease;
 }
 
 footer {
