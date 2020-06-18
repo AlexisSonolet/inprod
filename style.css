@@ -18,7 +18,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color: #0b2046; 
+    background-color: #1d1d1d; 
     font-family: 'Poppins', sans-serif;
 }
 
@@ -83,7 +83,7 @@ nav {
         left: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: #162741;
+        background-color: rgb(19, 19, 19);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -192,7 +192,7 @@ nav {
 }
 
 footer {
-    background-color: #0b2046;
+    background-color: #1d1d1d;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -209,6 +209,7 @@ footer {
 }
 
 .footer_logo {
+    margin-right: 10px;
     display: flex;
     flex-direction: row;
 }
