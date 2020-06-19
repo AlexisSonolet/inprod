@@ -1,4 +1,4 @@
-const navSlide = () => {
+function navSlide(hideShowreelText=false) {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
@@ -8,8 +8,10 @@ const navSlide = () => {
     burger.addEventListener('click', ()=>{
         // Disable scroll
         body.classList.toggle('body-no-scroll-y');
-        // Hide showreel
-        showreel.classList.toggle('center-home-header-invisible');
+        if (hideShowreelText) {
+            // Hide showreel
+            showreel.classList.toggle('center-home-header-invisible');
+        }
         // Toggle nav bar
         nav.classList.toggle('nav-active');
         // Animate links
@@ -27,8 +29,6 @@ const navSlide = () => {
 }
 
 
-const app = ()=>{
-    navSlide();
+function app(hideShowreelText=false) {
+    navSlide(hideShowreelText);
 }
-
-app();

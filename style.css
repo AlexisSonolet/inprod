@@ -28,12 +28,16 @@ nav {
 }
 
 .logo {
-    color: rgb(235, 235, 235);
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 22px;
     width: 30%;
     text-align: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: rgb(235, 235, 235);
 }
 
 .nav-links {
@@ -113,16 +117,17 @@ nav {
     .burger {
         display: block;
         cursor: pointer;
+        margin: 10px;
     }
+}
 
+@media (max-width: 550px) {
     .footer_site_credit p {
-        opacity: 0;
-        width: 0;
+        display: none;
     }
 
     .footer_asso_infos {
-        opacity: 0;
-        width: 0;
+        display: none;
     }
 }
 
