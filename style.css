@@ -32,15 +32,15 @@ nav {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 22px;
-    width: 50%;
+    width: 30%;
     text-align: center;
 }
 
 .nav-links {
     margin-left: 100px;
     display: flex;
-    justify-content: space-around;
-    width: 50%;
+    justify-content: space-between;
+    width: 70%;
 }
 
 .nav-links li {
@@ -64,21 +64,30 @@ nav {
     height: 3px;
     background-color: rgb(235, 235, 235);
     margin: 5px;
-    transition: all 0.15s ease;
+    transition: all 0.2s ease;
 }
 
 @media screen and (max-width: 1200px) {
+    nav {
+        align-items: center;
+        justify-content: start;
+    }
+
     .nav-links {
         width: 80%;
-        margin-left: 10px;
+        margin: 0;
+    }
+
+    .logo {
+        width: 20%;
     }
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
 
     .logo {
-        width: 80%;
+        width: 90%;
     }
 
     .nav-links{
@@ -94,7 +103,7 @@ nav {
         align-items: center;
         width: 70%;
         transform: translateX(-100%);
-        transition: transform 0.15s ease-in
+        transition: transform 0.2s ease-in
     }
 
     .nav-links li {
@@ -127,7 +136,7 @@ nav {
 @keyframes navLinkFade {
     from{
         opacity: 0;
-        transform: translateX(-50px) rotate(+20deg);
+        transform: translateX(-100px) rotate(+20deg);
     }
     to{
         opacity: 1;
@@ -149,7 +158,9 @@ nav {
     vertical-align: middle;
     margin-bottom: 7px;
     margin-right: -14px;
-    margin-right: -104.1px;
+    /* margin-right: -104.1px; */
+    margin-right: -103.5px;
+    /* margin-right: -15; */
 }
 
 .main_page_image {
@@ -176,7 +187,7 @@ nav {
 }
 
 .center-home-header-invisible {
-    transform: translateY(30px);
+    transform: translateY(50px);
     opacity: 0;
 }
 
