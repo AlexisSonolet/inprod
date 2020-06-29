@@ -1,4 +1,4 @@
-function navSlide(hideShowreelText=false) {
+function navSlide() {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
@@ -6,12 +6,6 @@ function navSlide(hideShowreelText=false) {
     const showreel = document.querySelector('.center-home-header');
 
     burger.addEventListener('click', ()=>{
-        // Disable scroll
-        body.classList.toggle('body-no-scroll-y');
-        if (hideShowreelText) {
-            // Hide showreel
-            showreel.classList.toggle('center-home-header-invisible');
-        }
         // Toggle nav bar
         nav.classList.toggle('nav-active');
         // Animate links
@@ -28,7 +22,21 @@ function navSlide(hideShowreelText=false) {
     
 }
 
+function hideShowreelBurger() {
+    const burger = document.querySelector('.burger');
+    const body = document.querySelector('*');
+    const showreel = document.querySelector('.center-home-header');
+    burger.addEventListener('click', ()=>{
+        // Disable scroll
+        body.classList.toggle('body-no-scroll-y');
+       showreel.classList.toggle('center-home-header-invisible');
+    });
+}
 
-function app(hideShowreelText=false) {
-    navSlide(hideShowreelText);
+function fadeScrollAnim() {
+    const presentation = document.querySelector('.presentationasso');
+    window.addEventListener('scroll', ()=>{
+        // Activate animation class
+        presentationasso.classList.toggle('presentationassodisable');
+    });
 }
