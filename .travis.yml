@@ -4,7 +4,8 @@ node_js:
   - "4.0"
 script:
   - echo "Deploying!" 
-install:
-  - sudo npm install -g firebase-tools
-after-success:
-  - firebase deploy --token $FIREBASE_TOKEN
+
+deploy:
+  provider: firebase
+  token: $FIREBASE_TOKEN
+  edge: true # opt in to dpl v2
