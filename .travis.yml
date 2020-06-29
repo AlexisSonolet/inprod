@@ -9,4 +9,4 @@ deploy:
   # skip_cleanup: true
   provider: firebase
   token: $FIREBASE_TOKEN
-    secure: ""
+  project: "site-inprod"
