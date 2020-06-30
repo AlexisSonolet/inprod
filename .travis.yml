@@ -1,12 +1,9 @@
 language: node_js
 node_js:
-  - "11.0"
-branches:
-  only:
-    - master
-
+  - "node"
+script:
+  -
 deploy:
-  # skip_cleanup: true
   provider: firebase
-  token: $FIREBASE_TOKEN
-  project: "site-inprod"
+  token:
+    secure: "hW0iVshuRIKF8xdH8jYRrLZSzoJ+IlJN/MfkjPua+N+w4x68U11D7N9FSfqXorSdQY57Us6T4MNSs7TcdsMNCa/8ctqxMKNVZqlxwRnW8vl2tyeJL44tW7o8EQs1RX5PFQw9F3IebyvGGIaxF7+zP4u4fY5Mtv/lMXM8QNbJpxRbSln/XVfqmqff3mt5d4VQ0rMdHBN7N4vkuH44cefhQQ/1JXXldINJlWLWHZN10c30xoCaR/LjEKErlQdQ3J+bY7+IjZzvHbOCm9zVG+22APlu0el1hMMWjTwHN3E4CHkqeuYkrd4hB4xIIGpA+LCif2eDBgGQVDU4hn5Zg024tCtFGLxF0FVZBczZBjmj6GtPA3P13A148FDVmpB9oZPyzGa1OPdfQjmOXngsvUmnu+InxYbnntV+DWkma4vECjYdck93VHULCMc3QxR0BK6sEWIEx/rqgaC7oWy/Ig+d1WMzP7b4h+5Z3inEiqEs7YR8HDU3p7ovztOBRH6tJGv6Y84BrhF7mw7qtF9Uf/g4II41W0JEV6ITLxTuhhAZCMjfU9TImGZ4KbNJwfTjRqBRaPUT1QSWMHXJyXdpZtC9ZE1nWti+xwYB+u5cGJP+q6lkyUr2kVzUA/MmevwAByTHL78x3Az3mPfF03VlnxSrQugvGKcZcEvp8xLFWqenaSw="
