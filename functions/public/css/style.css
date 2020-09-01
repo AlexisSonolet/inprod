@@ -54,6 +54,7 @@ nav {
 }
 
 .nav-links a {
+    z-index: 1;
     color: rgb(235, 235, 235);
     text-decoration: none;
     letter-spacing: 3px;
