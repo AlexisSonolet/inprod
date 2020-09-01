@@ -28,14 +28,6 @@ app.use(function(req, res) {
 app.use(function(error, req, res, next) {
     res.status(500);
     res.send('500: Internal Server Error', 500);
-    // 500.jade :
-    // extends layout
-    // block content
-    // h1= title
-    // p #{title}
-    // p #{error}
-    //
-    // res.render('500.jade', {title:'500: Internal Server Error', error: error});
 });
 
 exports.app = functions.https.onRequest(app);
