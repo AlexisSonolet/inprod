@@ -78,6 +78,18 @@
     text-align: center;
 }
 
+@media screen and (max-height: 280px) {
+    .center-home-element img {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 115px) {
+    .center-home-element {
+        display: none;
+    }
+}
+
 #showreel_bg {
     height: 100vh;
     overflow: hidden;
