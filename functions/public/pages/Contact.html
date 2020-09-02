@@ -8,8 +8,8 @@
         <base href="..">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
          <!-- FONT -->
@@ -31,35 +31,34 @@
         
         <!-- Corps de la page -->
         <main>
-            <div class="bg_image">
+            <div class="bgg">
                 <div class="text_contact" style="color: aliceblue;">
-                    Coucou
-                    <br><br>
-                    Voilà
-                    <br>
-                    Ok
-                    <br><br>
+                    <h1>Nous contacter</h1>
+                    <p>Vous pouvez nous contacter de différentes manières :</p>
+                    <ul>
+                        <li>Soit en envoyant un mail à <a href="mailto:inp.prod@gmail.com">inp.prod@gmail.com</a></li>
+                        <li>Soit en nous contactant via notre page <a href="https://www.facebook.com/INProd/">Facebook</a></li>
+                        <li>Soit en utilisant le formulaire de contact ci dessous</li>
+                    </ul>
                 </div>
                 <div class="container">
-                    <form action="action_page.php">
+                    <form action="url" method="post">  
+                        <div class="spacer">
+                            <label for="fname">Nom</label>
+                        </div>
+                        <input type="text" id="fname" name="name" placeholder="Votre nom...">
+                        
+                        <div class="spacer">
+                            <label for="fmail">Email</label>
+                        </div>
+                        <input type="text" id="fmail" name="mail" placeholder="Email de retour...">
                   
-                      <label for="fname">First Name</label>
-                      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        <div class="spacer">
+                            <label for="fmessage">Message</label>
+                        </div>
+                        <textarea id="fmessage" name="message" placeholder="Votre message..." ></textarea>
                   
-                      <label for="lname">Last Name</label>
-                      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                  
-                      <label for="country">Country</label>
-                      <select id="country" name="country">
-                        <option value="australia">Australia</option>
-                        <option value="canada">Canada</option>
-                        <option value="usa">USA</option>
-                      </select>
-                  
-                      <label for="subject">Subject</label>
-                      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-                  
-                      <input type="submit" value="Submit">
+                      <input type="submit" value="Envoyer">
                   
                     </form>
                   </div>
