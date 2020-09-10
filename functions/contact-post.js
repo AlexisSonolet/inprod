@@ -5,7 +5,7 @@ var transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: '*******@gmail.com',
+        user: 'inp.prod@gmail.com',
         pass: '************'
     }
 });
@@ -17,7 +17,7 @@ exports.sendEmail = functions.firestore
 });
 
 const mailOptions = {
-    from: `inp.prod@gmail.com`,
+    from: `softauthor1@gmail.com`,
     to: snap.data().email,
     subject: 'contact form message',
     html: `<h1>Order Confirmation</h1>
