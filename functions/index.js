@@ -13,20 +13,24 @@ const handlebars = require('express-handlebars');
 const app = express();
 
 
-app.set('view engine', 'handlebars');
-app.engine('handlebars', handlebars({
-    layoutsDir: __dirname + '/views/layouts',
-}));
-// var server = require('http').createServer(app);
-
-
 app.use(express.static('public'));
+
+app.set('views', path.join(__dirname, 'views'));
+
+app.set('view engine', 'hbs');//instead of app.engine('handlebars', handlebars({
+app.engine('hbs', handlebars({
+    extname: 'hbs',
+    layoutsDir: path.join(__dirname, '/views/layouts'),
+    defaultLayout: 'home-layout',
+    partialsDir: path.join(__dirname, '/views/partials/')
+}));
 
 
 // === SERVER ===
 // Chargement de la page index.html
-app.get('/', function(req, res) {
-    res.render('main', {layout : 'index'});
+app.get('/', (req, res) => {
+    //Using the index.hbs file instead of planB
+    res.render('main', {layout: false});
 });
 
 
