@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width= , initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+         <!-- FONT -->
+         <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">  
+         <link href="https://fonts.googleapis.com/css2?family=Sintony" rel="stylesheet">
+         <title>Contact</title>
+
+        <!-- JAVASCRIPT -->
+        <script src="js/app.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    </head>
+
+    <body>
+        
+        <!-- Navigation bar -->
+        {{> nav}}
+
+        
+        <!-- Corps de la page -->
+        <main>
+            <div>
+                <div class="text_contact" style="color: aliceblue;">
+                    <h1>Nous contacter</h1>
+                    <p>Vous pouvez nous contacter de différentes manières :</p>
+                    <ul>
+                        <li>Soit en envoyant un mail à <a href="mailto:inp.prod@gmail.com">inp.prod@gmail.com</a></li>
+                        <li>Soit en nous contactant via notre page <a href="https://www.facebook.com/INProd/">Facebook</a></li>
+                        <li>Soit en utilisant le formulaire de contact ci dessous</li>
+                    </ul>
+                </div>
+                <div class="container">
+                    <form action="/contact-post" method="post">  
+                        <div class="spacer">
+                            <label for="fname">Nom</label>
+                        </div>
+                        <input type="text" id="fname" name="name" placeholder="Votre nom...">
+                        
+                        <div class="spacer">
+                            <label for="fmail">Email</label>
+                        </div>
+                        <input type="text" id="fmail" name="mail" placeholder="Email de retour...">
+                  
+                        <div class="spacer">
+                            <label for="fmessage">Message</label>
+                        </div>
+                        <textarea id="fmessage" name="message" placeholder="Votre message..." ></textarea>
+                  
+                      <input type="submit" value="Envoyer">
+                  
+                    </form>
+                  </div>
+            </div>
+        </main>
+
+        
+        <!-- Footer -->
+        {{> footer}}
+
+
+        <!-- Scripts -->
+        <script>
+            navSlide();
+            AOS.init();
+        </script>
+
+    </body>
+
+</html>

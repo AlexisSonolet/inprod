@@ -14,7 +14,7 @@
         <!-- FONT -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">  
         <link href="https://fonts.googleapis.com/css2?family=Sintony" rel="stylesheet">
-        <title>INProd</title>
+        <title>404</title>
 
         <!-- JAVASCRIPT -->
         <script src="js/app.js"></script>
@@ -24,13 +24,13 @@
     <body>
         
 
-        <!-- === Navigation bar === -->
+        <!-- Navigation bar -->
         {{> nav}}
 
 
-        <!-- === Corps de la page === -->
+        <!-- Corps de la page -->
         <main>
-            <!-- Page d'accueil -->
+            <!-- Page d'erreur -->
             <div class="main_page_image" >
                 <div class="center-home-header">
                     <div class="center-home-element">
@@ -38,48 +38,24 @@
                     </div>
                     <div class="center-home-element">
                         <div class="text-home">
-                            <a href="#showreel_bg" class="showreel-text">
-                                Bande démo ǀ Showreel
+                            <a href="/" class="showreel-text">
+                                Error 404<br>Page not found
                             </a>
-                            <a href="#showreel_bg" class="showreel-text-small">
-                                Showreel
+                            <a href="/" class="showreel-text-small">
+                                Error 404
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Présentation de l'asso -->
-            <div data-aos="fade-left" data-aos-duration="1000" class="presentationasso">
-                <a href="https://www.instagram.com/martin.fournier270/">
-                    <img src="img/image_martin.PNG" width="500px" alt="">
-                </a>
-                <div class="presentationassotxt">
-                    L'INProd est l'association étudiante de photo/vidéo de Grenoble INP. Des soirées, en passant par les évènements sportifs, culturels, ou tout simplement un projet personnel... les projets sont divers !
-                    <br><br>
-                    Que ce soit tournages, photographies, animation et bien d’autre, l’INProd vous propose ses services !
-                    <br>
-                    <div class="ensavoirplus">
-                        <a href="pages/Association.html">
-                            en savoir plus
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- Vidéo de démo -->
-            <div id="showreel_bg">
-                <iframe data-aos="fade-up" data-aos-duration="1000" 
-                scrolling=“no” width="100%" height="100%" 
-                src="https://youtube.com/embed/gKOTByWrkIY?controls=0&showinfo=0&autohide=1" 
-                frameborder="0"></iframe>
-            </div>
         </main>
 
 
-        <!-- === Footer === -->
+        <!-- Footer -->
         {{> footer}}
 
 
-        <!-- === Scripts === -->
+        <!-- Scripts -->
         
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="/__/firebase/7.15.5/firebase-app.js"></script>
@@ -91,7 +67,6 @@
         <!-- Own scripts -->
         <script>
             navSlide();
-            hideShowreelBurger();
             AOS.init();
         </script>
         

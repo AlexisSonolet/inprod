@@ -1,3 +1,4 @@
+// Ouverture du panneau de navigation
 function navSlide() {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
@@ -22,6 +23,7 @@ function navSlide() {
     
 }
 
+// Cacher l'encadré Showreel de la page principale quand on ouvre le panneau de navigation
 function hideShowreelBurger() {
     const burger = document.querySelector('.burger');
     const body = document.querySelector('*');
@@ -30,13 +32,5 @@ function hideShowreelBurger() {
         // Disable scroll
         body.classList.toggle('body-no-scroll-y');
        showreel.classList.toggle('center-home-header-invisible');
-    });
-}
-
-function fadeScrollAnim() {
-    const presentation = document.querySelector('.presentationasso');
-    window.addEventListener('scroll', ()=>{
-        // Activate animation class
-        presentationasso.classList.toggle('presentationassodisable');
     });
 }
