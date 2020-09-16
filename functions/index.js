@@ -1,14 +1,14 @@
-// const functions = require('firebase-functions');
-// const firebase = require('firebase-admin');
+const functions = require('firebase-functions');
+const firebase = require('firebase-admin');
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const handlebars = require('express-handlebars');
 
-// const firebaseApp = firebase.initializeApp(
-//     functions.config().firebase
-// );
+const firebaseApp = firebase.initializeApp(
+    functions.config().firebase
+);
 
 const app = express();
 
@@ -60,10 +60,10 @@ app.get('/Association', (req, res) => {
 
 
 // === Contact form ===
-// app.use(bodyParser.urlencoded({ extended: true })); 
-// app.post('/contact-post', function(req, res) {
-//     console.log('You sent the name "' + req.body.name + '".');
-// });
+app.use(bodyParser.urlencoded({ extended: true })); 
+app.post('/contact-post', function(req, res) {
+    console.log('You sent the name "' + req.body.name + '".');
+});
 
 
 // === ERRORS ===
@@ -79,5 +79,5 @@ app.use(function(error, req, res, next) {
 });
 
 
-// exports.app = functions.https.onRequest(app);
-app.listen(5000);
+exports.app = functions.https.onRequest(app);
+// app.listen(5000);
